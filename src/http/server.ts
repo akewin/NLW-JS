@@ -7,6 +7,7 @@ import {
   validatorCompiler,
   type ZodTypeProvider,
 } from 'fastify-type-provider-zod'
+import { getWeekPendingGoals } from '../functions/getWeekPendingGoals'
 
 // Create an instance of a Fastify application
 const app = fastify().withTypeProvider<ZodTypeProvider>()
@@ -14,6 +15,12 @@ const app = fastify().withTypeProvider<ZodTypeProvider>()
 // Add schema validator and serializer -- FROM fastify type provider zod
 app.setValidatorCompiler(validatorCompiler)
 app.setSerializerCompiler(serializerCompiler)
+
+app.get('/pending-goals', async () => {
+  const sql = await getWeekPendingGoals()
+
+  return sql
+})
 
 app.post(
   '/goals',
