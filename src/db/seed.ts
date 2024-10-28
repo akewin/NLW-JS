@@ -3,7 +3,7 @@
 import { client, db } from '.'
 
 // Import the `goalsCompletions` and `goals` schema definitions from the `./schema` file.
-import { goalsCompletions, goals } from './schema'
+import { goalCompletions, goals } from './schema'
 
 // Import the `dayjs` library for date manipulation.
 import dayjs from 'dayjs'
@@ -11,7 +11,7 @@ import dayjs from 'dayjs'
 // Define an asynchronous function `seed` to seed the database with initial data.
 async function seed() {
   // Delete all records from the `goalsCompletions` table.
-  await db.delete(goalsCompletions)
+  await db.delete(goalCompletions)
 
   // Delete all records from the `goals` table.
   await db.delete(goals)
@@ -30,7 +30,7 @@ async function seed() {
   const startOfWeek = dayjs().startOf('week')
 
   // Insert new records into the `goalsCompletions` table.
-  await db.insert(goalsCompletions).values([
+  await db.insert(goalCompletions).values([
     { goalId: result[0].id, createdAt: startOfWeek.toDate() }, // Use the start of the week as the creation date.
     {
       goalId: result[1].id,
