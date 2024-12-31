@@ -2,7 +2,6 @@ import { count, and, eq, gte, lte, sql } from 'drizzle-orm'
 import { db } from '../db'
 import { goalCompletions, goals } from '../db/schema'
 import dayjs from 'dayjs'
-import { error } from 'console'
 
 interface CreateGoalCompoletionRequest {
   goalId: string
