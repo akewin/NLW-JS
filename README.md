@@ -19,7 +19,7 @@ Certifique-se de ter o [Docker](https://www.docker.com/products/docker-desktop/)
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/Matheus1415/NLWPocketJS
+   git clone https://github.com/akewin/NLW-JS
    ```
 2. Acesse a pasta do back-end:
    ```bash
