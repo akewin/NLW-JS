@@ -1,5 +1,11 @@
 # Olá, eu sou Anthony Kewin! 👋
 
+
+
+https://github.com/user-attachments/assets/7387b7d1-8c39-4bde-9962-d32ba14577b2
+
+
+
 Este projeto é composto por duas partes principais: `web` e `server`.
 
 - A pasta `web` abriga o front-end, desenvolvido com **React, Vite e TypeScript**.
